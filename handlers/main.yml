@@ -1,0 +1,6 @@
+---
+
+- name: Restart dhcpd-openbsd
+  service:
+    name: dhcpd-openbsd
+    state: restarted

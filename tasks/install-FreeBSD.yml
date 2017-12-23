@@ -1,0 +1,6 @@
+---
+
+- name: Install dhcpd-openbsd
+  pkgng:
+    name: dhcpd-openbsd
+    state: present

@@ -1,0 +1,8 @@
+dhcpd-openbsd_user: dhcpd-openbsd
+dhcpd-openbsd_group: dhcpd-openbsd
+dhcpd-openbsd_log_dir: /var/log/dhcpd-openbsd
+dhcpd-openbsd_db_dir: "{{ __dhcpd-openbsd_db_dir }}"
+dhcpd-openbsd_service: dhcpd-openbsd
+dhcpd-openbsd_conf_dir: "{{ __dhcpd-openbsd_conf_dir }}"
+dhcpd-openbsd_conf_file: "{{ __dhcpd-openbsd_conf_dir }}/dhcpd-openbsd.conf"
+dhcpd-openbsd_flags: ""

@@ -1,0 +1,5 @@
+- hosts: localhost
+  roles:
+    - ansible-role-dhcpd-openbsd
+  vars:
+    dhcpd-openbsd_config: ""
