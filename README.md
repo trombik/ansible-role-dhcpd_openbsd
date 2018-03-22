@@ -17,8 +17,7 @@ None
 | `dhcpd_openbsd_conf_dir` | `basedir` of `dhcpd.conf(5)` | `{{ __dhcpd_openbsd_conf_dir }}` |
 | `dhcpd_openbsd_conf_file` | path to `dhcpd.conf(5)` | `{{ __dhcpd_openbsd_conf_dir }}/dhcpd.conf` |
 | `dhcpd_openbsd_flags` | optional flags for OpenBSD `dhcpd` | `""` |
-| `dhcpd_openbsd_conf` | content of `ospfd.conf(5)` | `""` |
-
+| `dhcpd_openbsd_conf` | content of `dhcpd.conf(5)` | `""` |
 
 ## FreeBSD
 
