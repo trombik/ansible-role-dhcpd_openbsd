@@ -1,2 +1,6 @@
-__dhcpd-openbsd_db_dir: /var/db/dhcpd-openbsd
-__dhcpd-openbsd_conf_dir: /usr/local/etc/dhcpd-openbsd
+---
+__dhcpd_openbsd_user: dhcpd
+__dhcpd_openbsd_group: dhcpd
+__dhcpd_openbsd_service: dhcpd
+__dhcpd_openbsd_conf_dir: /usr/local/etc
+__dhcpd_openbsd_package: net/dhcpd

@@ -1,6 +1,16 @@
 ---
 
-- name: Install dhcpd-openbsd
+- name: Install dhcpd
   pkgng:
-    name: dhcpd-openbsd
-    state: present
+    name: "{{ dhcpd_openbsd_package }}"
+
+- name: Create rc.d file
+  template:
+    src: FreeBSD.rcd.j2
+    dest: /etc/rc.conf.d/dhcpd
+    validate: sh -n %s
+
+- name: Enable dhcpd
+  service:
+    name: "{{ dhcpd_openbsd_service }}"
+    enabled: yes

@@ -1,37 +1,18 @@
 ---
-# tasks file for ansible-role-dhcpd-openbsd
+# tasks file for ansible-role-dhcpd_openbsd
 
 - include_vars: "{{ ansible_os_family }}.yml"
 
 - include: "install-{{ ansible_os_family }}.yml"
 
-- name: Create log directory
-  file:
-    path: "{{ dhcpd-openbsd_log_dir }}"
-    mode: 0755
-    owner: "{{ dhcpd-openbsd_user }}"
-    group: "{{ dhcpd-openbsd_group }}"
-    state: directory
-  notify: Restart dhcpd-openbsd
-
-- name: Create db directory
-  file:
-    path: "{{ dhcpd-openbsd_db_dir }}"
-    mode: 0755
-    owner: "{{ dhcpd-openbsd_user }}"
-    group: "{{ dhcpd-openbsd_group }}"
-    state: directory
-  notify: Restart dhcpd-openbsd
-
-- name: Create dhcpd-openbsd.conf
+- name: Create dhcpd_openbsd.conf
   template:
-    src: dhcpd-openbsd.conf.j2
-    dest: "{{ dhcpd-openbsd_conf_file }}"
+    src: dhcpd.conf.j2
+    dest: "{{ dhcpd_openbsd_conf_file }}"
     validate: echo %s
   notify: Restart dhcpd-openbsd
 
-- name: Start dhcpd-openbsd
+- name: Start dhcpd_openbsd
   service:
-    name: "{{ dhcpd-openbsd_service }}"
-    enabled: true
+    name: "{{ dhcpd_openbsd_service }}"
     state: started

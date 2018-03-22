@@ -51,7 +51,10 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "client1" do |c|
     c.vm.network "private_network", ip: "192.168.21.100"
-    c.vm.hostname = "client1.virtualbox.reallyenglish.com"
+
+    # XXX the IP address here is not actually configured by Vagrant
+    c.vm.network "private_network", ip: "192.168.22.100", virtualbox__intnet: true, auto_config: false
+    c.vm.hostname = "client1.virtualbox.trombik.org"
     c.vm.provision :ansible do |ansible|
       ansible.limit = "192.168.21.100"
       ansible.playbook = "site.yml"
@@ -67,8 +70,10 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "server1" do |c|
+    c.vm.box = "trombik/ansible-openbsd-6.2-amd64"
     c.vm.network "private_network", ip: "192.168.21.200"
-    c.vm.hostname = "server1.virtualbox.reallyenglish.com"
+    c.vm.network "private_network", ip: "192.168.22.200", virtualbox__intnet: true
+    c.vm.hostname = "server1.virtualbox.trombik.org"
     c.vm.provision :ansible do |ansible|
       ansible.limit = "192.168.21.200"
       ansible.playbook = "site.yml"
