@@ -1,0 +1,23 @@
+---
+- hosts: server
+  become: yes
+  become_method: sudo
+  environment:
+    http_proxy: "{{ http_proxy | default() }}"
+    https_proxy: "{{ https_proxy | default() }}"
+    no_proxy: "{{ no_proxy | default() }}"
+
+  pre_tasks:
+  roles:
+    - ansible-role-dhcpd-openbsd
+  vars:
+    dhcpd_openbsd_flags: em2
+    dhcpd_openbsd_conf: |
+      option domain-name "i.trombik.org";
+      default-lease-time 600;
+      max-lease-time 7200;
+
+      subnet 192.168.22.0 netmask 255.255.255.0 {
+        range 192.168.22.100 192.168.22.100;
+        option broadcast-address 192.168.22.255;
+      }

@@ -1,18 +1,19 @@
 ---
 galaxy_info:
   author: Tomoyuki Sakurai
-  description: Configures something
-  company: Reallyenglish
+  description: Manages dhcpd from OpenBSD
+  company: N/A
   license: BSD
   min_ansible_version: 2.0
   platforms:
   - name: FreeBSD
     versions:
-    - 10.3
-#  - name: OpenBSD
-#    versions:
-#    - 6.0
-#    - 6.1
+    - 11.1
+  - name: OpenBSD
+    versions:
+#   - 6.0
+    - 6.1
+    - 6.2
 #  - name: Ubuntu
 #    versions:
 #    - trusty
@@ -22,6 +23,7 @@ galaxy_info:
 #    - 7
 
   galaxy_tags:
-    - system
+    - dhcpd
+    - dhcp
 #dependencies:
 #  - { role: username.common, some_parameter: 3 }

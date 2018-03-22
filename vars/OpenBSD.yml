@@ -1,0 +1,6 @@
+---
+__dhcpd_openbsd_user: _dhcpd
+__dhcpd_openbsd_group: _dhcpd
+__dhcpd_openbsd_service: dhcpd
+__dhcpd_openbsd_conf_dir: /etc
+__dhcpd_openbsd_package:

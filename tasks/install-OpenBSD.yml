@@ -1,0 +1,7 @@
+---
+
+- name: Enable dhcpd
+  service:
+    name: "{{ dhcpd_openbsd_service }}"
+    arguments: "{{ dhcpd_openbsd_flags }}"
+    enabled: yes
