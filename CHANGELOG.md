@@ -1,3 +1,7 @@
+## Release 1.2.1
+
+* b832e85 bugfix: QA
+
 ## Release 1.2.0
 
 * 5f78e10 bugfix: bump kitchen-vagrant
