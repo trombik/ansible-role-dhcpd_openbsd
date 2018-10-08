@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: dhcpd-openbsd
   author: Tomoyuki Sakurai
   description: Manages dhcpd from OpenBSD
   company: N/A
