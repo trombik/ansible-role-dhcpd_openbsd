@@ -1,3 +1,9 @@
+## Release 2.0.0
+
+* 9445ffd backward incompatibility: rename the role to dhcpd_openbsd
+* 59c6254 bugfix: add ansible.cfg
+* 6e7d743 bugfix: validate dhcpd.conf
+
 ## Release 1.2.1
 
 * b832e85 bugfix: QA
