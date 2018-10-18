@@ -1,6 +1,6 @@
 ---
 - hosts: example
-  become: yes 
+  become: yes
   become_method: sudo
   environment:
     http_proxy: "{{ http_proxy | default() }}"
@@ -9,4 +9,4 @@
 
   pre_tasks:
   roles:
-    - dhcpd-openbsd
+    - dhcpd_openbsd
