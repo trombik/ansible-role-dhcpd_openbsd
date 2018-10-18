@@ -9,7 +9,7 @@
 
   pre_tasks:
   roles:
-    - ansible-role-dhcpd-openbsd
+    - ansible-role-dhcpd_openbsd
   vars:
     dhcpd_openbsd_flags: em2
     dhcpd_openbsd_conf: |

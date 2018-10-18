@@ -1,4 +1,4 @@
-# ansible-role-dhcpd-openbsd
+# Ansible Role dhcpd_openbsd
 
 Manage `dhcpd(8)` from OpenBSD project.
 
@@ -48,7 +48,7 @@ None
 ```yaml
 - hosts: localhost
   roles:
-    - ansible-role-dhcpd-openbsd
+    - ansible-role-dhcpd_openbsd
   vars:
     dhcpd_openbsd_flags: em0
     dhcpd_openbsd_conf: |

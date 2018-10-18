@@ -1,6 +1,6 @@
 node ('virtualbox') {
 
-  def directory = "ansible-role-dhcpd-openbsd"
+  def directory = "ansible-role-dhcpd_openbsd"
   env.ANSIBLE_VAULT_PASSWORD_FILE = "~/.ansible_vault_key"
   stage 'Clean up'
   deleteDir()
