@@ -1,3 +1,4 @@
+---
 dhcpd_openbsd_package: "{{ __dhcpd_openbsd_package }}"
 dhcpd_openbsd_user: "{{ __dhcpd_openbsd_user }}"
 dhcpd_openbsd_group: "{{ __dhcpd_openbsd_group }}"

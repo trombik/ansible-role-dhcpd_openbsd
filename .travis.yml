@@ -9,8 +9,8 @@ sudo: false
 addons:
   apt:
     packages:
-    - python-pip
-    - curl
+      - python-pip
+      - curl
 
 cache:
   directories:
