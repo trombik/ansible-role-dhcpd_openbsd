@@ -46,6 +46,8 @@ None
 # Example Playbook
 
 ```yaml
+---
+
 - hosts: localhost
   roles:
     - ansible-role-dhcpd_openbsd
