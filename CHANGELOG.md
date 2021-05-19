@@ -1,3 +1,9 @@
+## Release 2.0.1
+
+* ec5fc50 bugfix: bump box versions
+* f06f73e bugfix: add x86_64-linux to Gemfile.lock
+* ae4eb12 bugfix: QA and update box versions
+
 ## Release 2.0.0
 
 * 9445ffd backward incompatibility: rename the role to dhcpd_openbsd
