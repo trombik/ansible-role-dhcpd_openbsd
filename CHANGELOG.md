@@ -1,3 +1,7 @@
+## Release 2.0.2
+
+* a5ac495 bugfix: update box versions
+
 ## Release 2.0.1
 
 * ec5fc50 bugfix: bump box versions
